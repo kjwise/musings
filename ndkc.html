@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neurodivergence Supplements Knowledge Capture</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #343541;
+            /* Dark background similar to ChatGPT */
+            color: #e0e0e0;
+            /* Light text color for readability */
+            margin: 20px;
+        }
+
+        h2 {
+            color: #ffffff;
+            border-bottom: 2px solid #10a37f;
+            /* Accent color */
+            padding-bottom: 5px;
+        }
+
+        a {
+            color: #1eae98;
+            /* Link color */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Table Styles */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            background-color: #40414a;
+            /* Slightly lighter than the background */
+        }
+
+        th,
+        td {
+            border: 1px solid #525357;
+            /* Border color matching dark theme */
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #10a37f;
+            /* Accent color for headers */
+            color: #40414a;
+        }
+
+        tr:nth-child(even) {
+            background-color: #3b3b44;
+            /* Alternate row color */
+        }
+
+        tr:hover {
+            background-color: #4e4e58;
+            /* Hover effect */
+        }
+
+        /* Mermaid Diagram Styles */
+        .mermaid {
+            margin: 0 auto;
+            background-color: #343541;
+            /* Match table background */
+            border: 0px solid #525357;
+            padding: 20px;
+            color: #e0e0e0;
+        }
+
+        /* Adjust Mermaid Diagram Colors */
+        .mermaid .label {
+            fill: #e0e0e0;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        .mermaid .node rect,
+        .mermaid .node circle,
+        .mermaid .node ellipse,
+        .mermaid .node polygon,
+        .mermaid .node path {
+            fill: #10a37f;
+            stroke: #10a37f;
+        }
+
+        .mermaid .edgeLabel {
+            background-color: #40414a;
+            color: #e0e0e0;
+        }
+
+        .mermaid .edgePath path {
+            stroke: #10a37f;
+            stroke-width: 2px;
+        }
+
+        .mermaid .cluster rect {
+            fill: #10a37f;
+            stroke: #525357;
+        }
+    </style>
+
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'base',
+            themeVariables: {
+                'fontFamily': 'Arial, sans-serif',
+                'background': '#343541',
+                'primaryColor': '#10a37f',
+                'primaryBorderColor': '#10a37f',
+                'primaryTextColor': '#e0e0e0',
+                'secondaryColor': '#666',
+                'tertiaryColor': '#20b38f',
+                'lineColor': '#10a37f',
+                'textColor': '#e0e0e0',
+                'nodeTextColor': '#e0e0e0',
+                'mainBkg': '#343541',
+                'edgeLabelBackground': '#40414a',
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+    <h1>Neurodivergence knowledge capture</h1>
+    <h2>Introduction</h2>
+    Hello, I'm Jóhann and I'm Neurodivergent, despite being high functioning. My first diagnosis was tourettes back in 1989.
+    I've been fighting my Neurodivergence, accepting it, learning about it, over the years. Self-development, working out,
+    making mistakes, figuring better out my needs and Boundaries. I've picked up many tools and a lot of knowledge on the way.
+
+    I am not a physician or a medical expert. I'm here to provide knowledge as a peer.
+
+    <h2>Purpose</h2>
+    The purpose of this page is to provide useful information, such as supplementations, emotional release tools, 
+    the relationship between trauma and Neurodivergence, diet, relationships and more.
+
+
+    <h2>Visual mindmap of supplements by impact on Neurodivergence</h2>
+
+    <div class="mermaid">
+        ---
+        config:
+        layout: "elk"
+        look: "classic"
+        theme: "neutral"
+        ---
+        mindmap
+        root[Supplements]
+            {{High Impact}}
+                Omega-3 Fatty Acids
+                L-Theanine
+                B Vitamins B6, B9, B12
+                Lion's Mane Mushroom
+                Bacopa Monnieri
+                L-Tyrosine
+                Rhodiola Rosea
+                Magnesium
+                Melatonin
+            {{Medium Impact}}
+                Phosphatidylserine
+                Panax Ginseng
+                L-Glutamine
+                Mucuna Pruriens
+                Zinc
+                N-Acetyl L-Carnitine
+                Huperzine A
+                GABA
+                Holy Basil - Tulsi
+                Saffron
+                Tryptophan
+                Ashwagandha
+                Lavender
+                CBD Oil
+                Valerian Root
+                Glycine
+                5-HTP
+                Chamomile
+                Reishi Mushroom
+                Vitamin D3
+                Vitamin K2
+                Coenzyme Q10 (CoQ10)
+                NADH
+                NMN
+            {{Low impact}}
+                Vitamin C
+                Potassium
+                Iodine
+                Collagen
+                Probiotics
+                    Acidophilus
+
+    </div>
+
+    <script>
+        // JavaScript code to make the table sortable
+        document.addEventListener('DOMContentLoaded', function () {
+            function sortTable(table, col, reverse) {
+                const tb = table.tBodies[0]; // Use first <tbody>
+                const tr = Array.prototype.slice.call(tb.rows, 0); // Convert to array
+                reverse = -((+reverse) || -1);
+                tr.sort(function (a, b) {
+                    const aText = a.cells[col].textContent.trim();
+                    const bText = b.cells[col].textContent.trim();
+                    return reverse * aText.localeCompare(bText, undefined, { numeric: true });
+                });
+                for (let i = 0; i < tr.length; ++i) tb.appendChild(tr[i]); // Append each row in order
+            }
+
+            // Attach click events to sortable headers
+            const table = document.getElementById('supplementsTable');
+            const headers = table.querySelectorAll('th.sortable');
+            headers.forEach(function (header, index) {
+                let asc = true;
+                header.addEventListener('click', function () {
+                    sortTable(table, index, asc);
+                    asc = !asc;
+                    // Update header classes for styling
+                    headers.forEach(h => h.classList.remove('asc', 'desc'));
+                    header.classList.toggle(asc ? 'asc' : 'desc');
+                });
+            });
+        });
+    </script>
+
+    <style>
+        /* Add cursor pointer to sortable headers */
+        th.sortable {
+            cursor: pointer;
+            position: relative;
+        }
+
+        /* Ascending sort indicator */
+        th.sortable.asc::after {
+            content: '▲';
+            position: absolute;
+            right: 8px;
+            font-size: 0.8em;
+        }
+
+        /* Descending sort indicator */
+        th.sortable.desc::after {
+            content: '▼';
+            position: absolute;
+            right: 8px;
+            font-size: 0.8em;
+        }
+    </style>
+
+    <h2>Sortable matrix view table on supplements for Neurodivergence</h2>
+    <table id="supplementsTable">
+        <thead>
+            <tr>
+                <th class="sortable">Supplement</th>
+                <th class="sortable">Impact</th>
+                <th class="sortable">Use With</th>
+                <th class="sortable">Focus</th>
+                <th class="sortable">Calmness</th>
+                <th class="sortable">Sleep</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="https://ods.od.nih.gov/factsheets/Omega3FattyAcids-Consumer/" target="_blank">Omega-3 Fatty
+                        Acids</a></td>
+                <td>High</td>
+                <td>Coenzyme Q10</td>
+                <td>&#10004;</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="https://www.medicalnewstoday.com/articles/285710" target="_blank">L-Theanine</a></td>
+                <td>High</td>
+                <td>Caffeine</td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="https://ods.od.nih.gov/factsheets/VitaminB6-Consumer/" target="_blank">B Vitamins (B6, B9,
+                        B12)</a></td>
+                <td>High</td>
+                <td>Magnesium</td>
+                <td>&#10004;</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="https://www.healthline.com/nutrition/lions-mane-mushroom" target="_blank">Lion's Mane
+                        Mushroom</a></td>
+                <td>High</td>
+                <td>Other Mushrooms</td>
+                <td>&#10004;</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3153866/" target="_blank">Bacopa Monnieri</a>
+                </td>
+                <td>High</td>
+                <td>Ginkgo Biloba</td>
+                <td>&#10004;</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="https://medlineplus.gov/druginfo/natural/838.html" target="_blank">L-Tyrosine</a></td>
+                <td>High</td>
+                <td></td>
+                <td>&#10004;</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="https://www.medicalnewstoday.com/articles/317426" target="_blank">Rhodiola Rosea</a></td>
+                <td>High</td>
+                <td>Ashwagandha</td>
+                <td>&#10004;</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="https://www.webmd.com/vitamins/ai/ingredientmono-992/phosphatidylserine"
+                        target="_blank">Phosphatidylserine</a></td>
+                <td>Medium</td>
+                <td>Omega-3 Fatty Acids</td>
+                <td>&#10004;</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="https://medlineplus.gov/druginfo/natural/966.html" target="_blank">L-Glutamine</a></td>
+                <td>Medium</td>
+                <td>Probiotics</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="https://www.nccih.nih.gov/health/asian-ginseng" target="_blank">Panax Ginseng</a></td>
+                <td>Medium</td>
+                <td>Ginkgo Biloba</td>
+                <td>&#10004;</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4217159/" target="_blank">Mucuna Pruriens</a>
+                </td>
+                <td>Medium</td>
+                <td></td>
+                <td>&#10004;</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="https://ods.od.nih.gov/factsheets/Zinc-Consumer/" target="_blank">Zinc</a></td>
+                <td>Medium</td>
+                <td>Magnesium, B Vitamins</td>
+                <td>&#10004;</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="https://medlineplus.gov/druginfo/natural/875.html" target="_blank">N-Acetyl L-Carnitine
+                        (ALCAR)</a></td>
+                <td>Medium</td>
+                <td>Alpha-Lipoic Acid</td>
+                <td>&#10004;</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="https://www.nccih.nih.gov/health/huperzine-a" target="_blank">Huperzine A</a></td>
+                <td>Medium</td>
+                <td>Nootropic Stack</td>
+                <td>&#10004;</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <!-- Supplements for Calmness and Sleep -->
+            <tr>
+                <td><a href="https://ods.od.nih.gov/factsheets/Magnesium-Consumer/" target="_blank">Magnesium</a></td>
+                <td>High</td>
+                <td>Zinc, B Vitamins</td>
+                <td></td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+            </tr>
+            <tr>
+                <td><a href="https://www.healthline.com/nutrition/gaba" target="_blank">GABA</a></td>
+                <td>Medium</td>
+                <td>Vitamin B6</td>
+                <td></td>
+                <td>&#10004;</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="https://www.webmd.com/vitamins/ai/ingredientmono-1100/holy-basil" target="_blank">Holy
+                        Basil (Tulsi)</a></td>
+                <td>Medium</td>
+                <td></td>
+                <td></td>
+                <td>&#10004;</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="https://www.healthline.com/nutrition/saffron" target="_blank">Saffron</a></td>
+                <td>Medium</td>
+                <td></td>
+                <td></td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+            </tr>
+            <tr>
+                <td><a href="https://medlineplus.gov/druginfo/natural/326.html" target="_blank">Tryptophan</a></td>
+                <td>Medium</td>
+                <td>Ashwagandha</td>
+                <td></td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+            </tr>
+            <tr>
+                <td><a href="https://www.webmd.com/vitamins/ai/ingredientmono-953/ashwagandha"
+                        target="_blank">Ashwagandha</a></td>
+                <td>Medium</td>
+                <td>Tryptophan, Rhodiola Rosea</td>
+                <td></td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+            </tr>
+            <tr>
+                <td><a href="https://www.nccih.nih.gov/health/lavender" target="_blank">Lavender</a></td>
+                <td>Medium</td>
+                <td>Chamomile</td>
+                <td></td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+            </tr>
+            <tr>
+                <td><a href="https://www.health.harvard.edu/blog/does-cbd-help-anxiety-2019041116479"
+                        target="_blank">CBD Oil</a></td>
+                <td>Medium</td>
+                <td></td>
+                <td></td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+            </tr>
+            <tr>
+                <td><a href="https://ods.od.nih.gov/factsheets/Melatonin-Consumer/" target="_blank">Melatonin</a></td>
+                <td>High</td>
+                <td>Magnesium</td>
+                <td></td>
+                <td></td>
+                <td>&#10004;</td>
+            </tr>
+            <tr>
+                <td><a href="https://www.nccih.nih.gov/health/valerian" target="_blank">Valerian Root</a></td>
+                <td>Medium</td>
+                <td>Hops, Passionflower</td>
+                <td></td>
+                <td></td>
+                <td>&#10004;</td>
+            </tr>
+            <tr>
+                <td><a href="https://www.medicalnewstoday.com/articles/319470" target="_blank">Glycine</a></td>
+                <td>Medium</td>
+                <td>Magnesium</td>
+                <td></td>
+                <td></td>
+                <td>&#10004;</td>
+            </tr>
+            <tr>
+                <td><a href="https://www.webmd.com/vitamins/ai/ingredientmono-794/5-htp" target="_blank">5-HTP</a></td>
+                <td>Medium</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>&#10004;</td>
+            </tr>
+            <tr>
+                <td><a href="https://www.healthline.com/nutrition/chamomile-tea-benefits" target="_blank">Chamomile</a>
+                </td>
+                <td>Medium</td>
+                <td>Lavender</td>
+                <td></td>
+                <td></td>
+                <td>&#10004;</td>
+            </tr>
+            <tr>
+                <td><a href="https://www.healthline.com/nutrition/reishi-mushroom" target="_blank">Reishi Mushroom</a>
+                </td>
+                <td>Medium</td>
+                <td>Other Mushrooms</td>
+                <td></td>
+                <td></td>
+                <td>&#10004;</td>
+            </tr>
+            <!-- Additional Supplements -->
+            <tr>
+                <td><a href="https://ods.od.nih.gov/factsheets/VitaminD-Consumer/" target="_blank">Vitamin D3</a></td>
+                <td>Medium</td>
+                <td>Vitamin K2</td>
+                <td>&#10004;</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="https://www.healthline.com/nutrition/vitamin-k2" target="_blank">Vitamin K2</a></td>
+                <td>Medium</td>
+                <td>Vitamin D3</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="https://ods.od.nih.gov/factsheets/VitaminC-Consumer/" target="_blank">Vitamin C</a></td>
+                <td>Low</td>
+                <td>Collagen</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="https://ods.od.nih.gov/factsheets/CoenzymeQ10-Consumer/" target="_blank">Coenzyme Q10
+                        (CoQ10)</a></td>
+                <td>Medium</td>
+                <td>Omega-3 Fatty Acids</td>
+                <td>&#10004;</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="https://medlineplus.gov/druginfo/natural/871.html" target="_blank">NADH</a></td>
+                <td>Medium</td>
+                <td>NMN</td>
+                <td>&#10004;</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="https://www.webmd.com/vitamins/ai/ingredientmono-1264/nicotinamide-riboside"
+                        target="_blank">NMN</a></td>
+                <td>Medium</td>
+                <td>NADH</td>
+                <td>&#10004;</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <!-- Potassium and Iodine -->
+            <tr>
+                <td><a href="https://ods.od.nih.gov/factsheets/Potassium-Consumer/" target="_blank">Potassium</a></td>
+                <td>Low</td>
+                <td>Iodine</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="https://ods.od.nih.gov/factsheets/Iodine-Consumer/" target="_blank">Iodine</a></td>
+                <td>Low</td>
+                <td>Potassium</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <!-- Collagen and Probiotics -->
+            <tr>
+                <td><a href="https://www.medicalnewstoday.com/articles/262881" target="_blank">Collagen</a></td>
+                <td>Low</td>
+                <td>Vitamin C</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="https://www.healthline.com/nutrition/probiotics-101" target="_blank">Acidophilus Plus
+                        (Probiotics)</a></td>
+                <td>Low</td>
+                <td>L-Glutamine</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <h2>How to Use This Table</h2>
+    <li>Focus on supplements rated A for the most significant potential benefits.</li>
+    <li>Use the <i>Use With</i> column to identify synergistic combinations.</li>
+
+    <h3>Target Specific Effects</h3>
+    <li>For Focus: Look at supplements with a ✔ in the Focus column.</li>
+    <li>For Calmness: Choose supplements with a ✔ in the Calmness column.</li>
+    <li>For Sleep: Select supplements with a ✔ in the Sleep column.</li>
+
+    <h2>Additional Considerations</h2>
+    <li>Choose high-quality products from reputable brands to ensure purity and potency.</li>
+    <li>Introduce new supplements one at a time to monitor how your body responds.</li>
+    <li>Keep a journal to track the effects on your focus, calmness, and sleep, adjusting the regimen as needed with
+        professional guidance.</li>
+    <li>Supplements work best in conjunction with a healthy lifestyle, including a balanced diet, regular exercise,
+        stress
+        management techniques, and good sleep hygiene.</li>
+    </br>
+    Supplements work best in conjunction with a healthy lifestyle, including a balanced diet, regular exercise, stress
+    management techniques, and good sleep hygiene.
+
+</body>
+
+</html>
